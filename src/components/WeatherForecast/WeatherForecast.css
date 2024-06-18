@@ -1,0 +1,21 @@
+section {
+  display: flex;
+  justify-content: center;
+}
+
+section .weather {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+main {
+  width: 100vw;
+}
+
+.weather span {
+  font-weight: bold;
+}
+h1 {
+  text-align: center;
+}
