@@ -6,10 +6,10 @@ const App = () => {
     <main>
       <h1>Local Weather</h1>
       <section>
-        {WeatherForecastData.map((forecast) => {
+        {WeatherForecastData.map((forecast, idx) => {
           return (
             <WeatherForecast
-              key={forecast.id}
+              key={idx}
               day={forecast.day}
               img={forecast.img}
               imgAlt={forecast.imgAlt}
