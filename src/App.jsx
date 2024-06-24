@@ -1,17 +1,28 @@
-import WeatherForecast from "./components/WeatherForecast";
+import "./styles/WeatherForecast.css";
 import WeatherForecastData from "./data/weatherForecastData";
 
-const App = () => {
+export default function App() {
   return (
     <main>
       <h1>Local Weather</h1>
       <section>
-        {WeatherForecastData.map((forecast, idx) => {
-          return <WeatherForecast key={idx} forecast={forecast} />;
+        {WeatherForecastData.map((forecast) => {
+          return (
+            <section className="weather">
+              <h2>{forecast.day}</h2>
+              <img src={forecast.img} alt={forecast.imgAlt} />
+              <p>
+                <span>conditions: </span>
+                {forecast.conditions}
+              </p>
+              <p>
+                <span>time: </span>
+                {forecast.time}
+              </p>
+            </section>
+          );
         })}
       </section>
     </main>
   );
-};
-
-export default App;
+}
