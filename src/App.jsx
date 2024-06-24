@@ -1,5 +1,5 @@
-import WeatherForecast from "./components/WeatherForecast/WeatherForecast";
-import WeatherForecastData from "./components/WeatherForecast/WeatherForecastData";
+import WeatherForecast from "./components/WeatherForecast";
+import WeatherForecastData from "./data/weatherForecastData";
 
 const App = () => {
   return (
@@ -7,16 +7,7 @@ const App = () => {
       <h1>Local Weather</h1>
       <section>
         {WeatherForecastData.map((forecast, idx) => {
-          return (
-            <WeatherForecast
-              key={idx}
-              day={forecast.day}
-              img={forecast.img}
-              imgAlt={forecast.imgAlt}
-              conditions={forecast.conditions}
-              time={forecast.time}
-            />
-          );
+          return <WeatherForecast key={idx} forecast={forecast} />;
         })}
       </section>
     </main>
