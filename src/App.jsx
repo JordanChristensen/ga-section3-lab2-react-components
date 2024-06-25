@@ -5,7 +5,7 @@ export default function App() {
   return (
     <main>
       <h1>Local Weather</h1>
-      <section>
+      <section className="weather-container">
         {WeatherForecastData.map((forecast) => {
           return (
             <section className="weather">

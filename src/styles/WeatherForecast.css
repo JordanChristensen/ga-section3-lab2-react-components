@@ -1,6 +1,10 @@
-section {
+.weather-container {
   display: flex;
+}
+
+section {
   justify-content: center;
+  align-items: center;
 }
 
 .weather {
@@ -18,4 +22,7 @@ main {
 }
 h1 {
   text-align: center;
+}
+img {
+  max-width: 100px;
 }
