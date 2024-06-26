@@ -6,9 +6,9 @@ export default function App() {
     <main>
       <h1>Local Weather</h1>
       <section className="weather-container">
-        {WeatherForecastData.map((forecast) => {
+        {WeatherForecastData.map((forecast, idx) => {
           return (
-            <section className="weather">
+            <section key={idx} className="weather">
               <h2>{forecast.day}</h2>
               <img src={forecast.img} alt={forecast.imgAlt} />
               <p>
